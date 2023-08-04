@@ -1,38 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dice Game with Redux Toolkit 🎲
 
-## Getting Started
+This is a simple web application built using Next.js, Tailwind CSS, and Redux Toolkit. The purpose of this project is to test and showcase the usage of Redux Toolkit, a powerful toolset for managing state in Redux applications. The game consists of rolling a dice and advancing through a board with different rules based on the dice result.
 
-First, run the development server:
+## How to Play
+
+1. Click on the "Roll Dice" button to roll the dice.
+2. Depending on the dice result, you will advance on the board following these rules:
+   - If you roll a number between 1 and 2, you will advance 1 position.
+   - If you roll a number between 3 and 4, you will advance 3 positions.
+   - If you roll a number greater than 4, you will advance 5 positions.
+
+## Project Setup
+
+Before running the project, make sure you have Node.js and npm installed on your system. Then, follow these steps:
+
+1. Clone the repository and navigate to the project folder.
+
+2. Install the dependencies by running the following command:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be accessible at `http://localhost:3000`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- `pages/index.js`: The main component that displays the game board and handles dice rolling logic.
+- `store/`: Contains the Redux store configuration and actions using Redux Toolkit.
+- `tailwind.config.js`: The Tailwind CSS configuration file.
+- `postcss.config.js`: The PostCSS configuration file.
+- `.eslintrc.js`: ESLint configuration file.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Dependencies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next.js: A React framework for building server-side rendered applications.
+- Tailwind CSS: A utility-first CSS framework for rapidly building custom designs.
+- Redux Toolkit: A collection of utility functions for simplified Redux setup.
+- react-redux: The official React bindings for Redux.
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the production version of the application.
+- `npm start`: Starts the production server.
+- `npm run lint`: Lints the project files using ESLint.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Note
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+When a player reaches position 100 on the board, an alert will be shown indicating that they have reached the end of the board. 🎲
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
