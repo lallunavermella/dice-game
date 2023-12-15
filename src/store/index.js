@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const diceSlice = createSlice({
   name: "dice",
   initialState: {
-    value: 1,
+    value: 0,
   },
   reducers: {
     rollDice: (state, action) => {
